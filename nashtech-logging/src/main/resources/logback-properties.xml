@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+    <springProperty name="LOGGING_PATH" source="core.logback.rollingFile.path"/>
+    <springProperty name="LOGGING_FILE_NAME" source="core.logback.rollingFile.fileName"/>
+    <springProperty name="LOGGING_PACKAGE_CONSOLE" source="core.logback.console.package"/>
+    <springProperty name="LOGGING_PACKAGE_ROLLING_FILE" source="core.logback.rollingFile.package"/>
+    <springProperty name="LOGGING_LEVEL_CONSOLE" source="core.logback.console.level"/>
+    <springProperty name="LOGGING_LEVEL_ROLLING_FILE" source="core.logback.rollingFile.level"/>
+    <springProperty name="LOGGING_LEVEL_ROOT" source="core.logback.root.level"/>
+    <springProperty name="LOGGING_FILE_SIZE_ROLLING_FILE" source="core.logback.rollingFile.size"/>
+    <springProperty name="LOGGING_CONSOLE_ROOT_APPENDER" source="core.logback.console.enable"/>
+    <springProperty name="LOGGING_ROLLING_FILE_ROOT_APPENDER" source="core.logback.rollingFile.enable"/>
+
+</included>

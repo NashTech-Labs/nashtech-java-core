@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="logback-properties.xml"/>
+    <include resource="console-appender.xml"/>
+    <include resource="rollingfile-appender.xml"/>
+
+
+    <!-- LOG everything at INFO level -->
+    <root level="${LOGGING_LEVEL_ROOT:-info}">
+        <if condition='${LOGGING_CONSOLE_ROOT_APPENDER:-true}'>
+            <then>
+                <appender-ref ref="Console"/>
+            </then>
+        </if>
+        <if condition='${LOGGING_ROLLING_FILE_ROOT_APPENDER:-false}'>
+            <then>
+                <appender-ref ref="RollingFile"/>
+            </then>
+        </if>
+    </root>
+
+    <if condition='${LOGGING_ROLLING_FILE_ROOT_APPENDER:-false}'>
+        <then>
+            <logger name="${LOGGING_PACKAGE_CONSOLE:-com.nashtechglobal}" level="${LOGGING_LEVEL_CONSOLE:-info}"
+                    additivity="false">
+                <appender-ref ref="RollingFile"/>
+            </logger>
+        </then>
+    </if>
+
+    <if condition='${LOGGING_CONSOLE_ROOT_APPENDER:-true}'>
+        <then>
+            <logger name="${LOGGING_PACKAGE_ROLLING_FILE:-com.nashtechglobal}"
+                    level="${LOGGING_LEVEL_ROLLING_FILE:-debug}" additivity="false">
+                <appender-ref ref="Console"/>
+            </logger>
+        </then>
+    </if>
+
+
+</configuration>
