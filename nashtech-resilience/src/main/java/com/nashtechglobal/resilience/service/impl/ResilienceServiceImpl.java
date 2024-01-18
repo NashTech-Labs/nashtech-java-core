@@ -11,7 +11,7 @@ import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.github.resilience4j.retry.annotation.Retry;
 import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -40,8 +40,18 @@ public class ResilienceServiceImpl implements ResilienceService {
     /**
      * webclientservice.
      */
-    @Autowired
     private WebClientService webClientService;
+
+    /**
+     * Constructor to initialize the ResilienceServiceImpl
+     * with a WebClientService.
+     *
+     * @param webClientServic The WebClientService to be used.
+     */
+    public ResilienceServiceImpl(
+            final WebClientService webClientServic) {
+        this.webClientService = webClientServic;
+    }
 
     /**
      * {@inheritDoc}

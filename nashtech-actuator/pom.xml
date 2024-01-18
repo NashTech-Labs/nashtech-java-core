@@ -13,4 +13,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <rootDir>${project.parent.basedir}</rootDir>
     </properties>
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <properties>
+                <!-- Sonar Config -->
+                <sonar.projectKey>nashtech-java-sdk_nashtech-actuator</sonar.projectKey>
+            </properties>
+        </profile>
+    </profiles>
 </project>

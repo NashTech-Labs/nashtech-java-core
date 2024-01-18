@@ -300,9 +300,10 @@
             </activation>
             <properties>
                 <!--	Sonar Config		-->
-                <sonar.organization>java-sdk</sonar.organization>
+                <sonar.projectKey>nashtech-java-sdk_nashtech-java-core</sonar.projectKey>
+                <sonar.organization>nashtech-java-sdk</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-                <sonarConfig>36a53013ed38c6b0cbdf210dd5ab4221efcd954d</sonarConfig> <!-- NOSONAR -->
+                <sonarConfig>45445ec79d1cf02f181ad0ebbbf43240712810a4</sonarConfig> <!-- NOSONAR -->
                 <sonar.login>${sonarConfig}</sonar.login> <!-- NOSONAR -->
                 <sonar.coverage.exclusions>
                     **/*config*/**,

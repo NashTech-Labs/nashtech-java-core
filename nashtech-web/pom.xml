@@ -21,5 +21,13 @@
         </dependency>
 
     </dependencies>
-
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <properties>
+                <!-- Sonar Config -->
+                <sonar.projectKey>nashtech-java-sdk_nashtech-web</sonar.projectKey>
+            </properties>
+        </profile>
+    </profiles>
 </project>

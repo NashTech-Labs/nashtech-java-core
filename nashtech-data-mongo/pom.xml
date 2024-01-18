@@ -24,5 +24,13 @@
             <version>${mongoDbVersion}</version>
         </dependency>
     </dependencies>
-
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <properties>
+                <!-- Sonar Config -->
+                <sonar.projectKey>nashtech-java-sdk_nashtech-data-mongo</sonar.projectKey>
+            </properties>
+        </profile>
+    </profiles>
 </project>
