@@ -1,7 +1,6 @@
 package com.nashtechglobal.web.service;
 
 import com.nashtechglobal.web.model.ExternalApiRequest;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -13,8 +12,18 @@ public class WebClientService {
     /**
      * Inject Rest template.
      */
-    @Autowired
     private RestTemplate restTemplate;
+
+    /**
+     * Constructor to initialize the ResilienceServiceImpl
+     * with a WebClientService.
+     *
+     * @param restTemplat The WebClientService to be used.
+     */
+    public WebClientService(
+            final RestTemplate restTemplat) {
+        this.restTemplate = restTemplat;
+    }
 
     /**
      * @param apiRequest The request body containing the request URL,
