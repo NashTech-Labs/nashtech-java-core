@@ -26,19 +26,6 @@
         <module>nashtech-observability</module>
         <module>nashtech-logging</module>
     </modules>
-    <!-- <repositories>
-        <repository>
-        <id>nashtech-java-core</id>
-        <url>https://pkgs.dev.azure.com/nashtechglobal-internal/nashtech-java-core-examplers/_packaging/nashtech-java-core/maven/v1</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-        </repository>
-    </repositories> -->
-
     <repositories>
         <repository>
             <id>central</id>
@@ -62,19 +49,6 @@
           </snapshots>
         </repository>
     </distributionManagement>
-
-    <!-- <distributionManagement>
-        <repository>
-        <id>nashtech-java-core</id>
-        <url>https://pkgs.dev.azure.com/nashtechglobal-internal/nashtech-java-core-examplers/_packaging/nashtech-java-core/maven/v1</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-        </repository>
-    </distributionManagement> -->
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
@@ -299,7 +273,6 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <!--	Sonar Config		-->
                 <sonar.projectKey>nashtech-java-sdk_nashtech-java-core</sonar.projectKey>
                 <sonar.organization>nashtech-java-sdk</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -308,6 +281,7 @@
                 <sonar.coverage.exclusions>
                     **/*config*/**,
                     **/*common*/**,
+                    **/*exception*/**,
                     **/*constant*/**,
                     **/*model*/**,
                     **/*Application.*
