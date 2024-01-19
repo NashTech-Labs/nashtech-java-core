@@ -16,10 +16,7 @@
     <profiles>
         <profile>
             <id>sonar</id>
-            <properties>
-                <!-- Sonar Config -->
-                <sonar.projectKey>nashtech-java-sdk_nashtech-actuator</sonar.projectKey>
-            </properties>
         </profile>
     </profiles>
+
 </project>

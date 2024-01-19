@@ -57,7 +57,7 @@
         <checkStyleVersion>3.2.1</checkStyleVersion>
         <spotbugsVersion>4.7.3.4</spotbugsVersion>
         <findbugsVersion>1.12.0</findbugsVersion>
-        <sonarVersion>3.9.0.2155</sonarVersion>
+        <sonarVersion>3.10.0.2594</sonarVersion>
         <pmdVersion>3.20.0</pmdVersion>
         <jacocoVersion>0.8.8</jacocoVersion>
         <lombokVersion>1.18.26</lombokVersion>
@@ -273,10 +273,10 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <sonar.projectKey>nashtech-java-sdk_nashtech-java-core</sonar.projectKey>
+                <sonar.projectKey>${project.artifactId}</sonar.projectKey>
                 <sonar.organization>nashtech-java-sdk</sonar.organization>
                 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-                <sonarConfig>45445ec79d1cf02f181ad0ebbbf43240712810a4</sonarConfig> <!-- NOSONAR -->
+                <sonarConfig>4694b9fca390abd6dc4e6d0e636f9e71fba98617</sonarConfig> <!-- NOSONAR -->
                 <sonar.login>${sonarConfig}</sonar.login> <!-- NOSONAR -->
                 <sonar.coverage.exclusions>
                     **/*config*/**,
