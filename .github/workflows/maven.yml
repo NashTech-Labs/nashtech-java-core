@@ -11,7 +11,7 @@ name: SonarCloud Scan
 on:
   push:
     branches:
-      - main
+      - sonar-withgithubactions
 
 jobs:
   sonarcloud:
