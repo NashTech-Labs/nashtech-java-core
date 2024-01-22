@@ -26,4 +26,4 @@ jobs:
           args: >
             -Dsonar.organization=nashtech-java-sdk
             -Dsonar.projectKey=nashtech-java-core
-            -Dsonar.python.coverage.reportPaths=coverage.xml
+          
