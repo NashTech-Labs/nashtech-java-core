@@ -30,6 +30,6 @@ jobs:
         run: mvn clean install
 
       - name: SonarCloud Scan
-        run:  mvn sonar:sonar -Dsonar.organization=<your-organization-key> -Dsonar.projectKey=<your-project-key>
+        run:  mvn sonar:sonar -Dsonar.organization=nashtech-java-sdk -Dsonar.projectKey=nashtech-java-core
         env:
             SONAR_TOKEN: 4694b9fca390abd6dc4e6d0e636f9e71fba98617
